@@ -1,0 +1,13 @@
+[
+    {
+        "pk": 1,
+        "model": "rango.user",
+        "fields": {
+            "username": "admin",
+            "is_active": true,
+            "is_superuser": true,
+            "is_staff": true,
+            "password": "pbkdf2_sha256$12000$cAEvi9UPPs9S$GmQ1L01h8eJBW3SWdNpaIubGBKK7qfRAF+GJN6Yh3gA=",
+        }
+    }
+]

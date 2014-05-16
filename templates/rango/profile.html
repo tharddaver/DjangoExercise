@@ -1,0 +1,26 @@
+{% extends 'rango/base.html' %}
+
+{% block title %}Profile{% endblock %}
+
+{% block body_block %}
+    <div class="hero-unit">
+        <h1>Profile</h1>
+        <br/>
+
+        <div class="container">
+            <form class="form-signin span8" id="user_form" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <h2 class="form-signin-heading">Edit Profile</h2>
+                {% for field in form.visible_fields %}
+                    {{ field.errors }}
+                    {{ field.help_text }}<br/>
+                    {{ field }}<br/>
+                {% endfor %}
+
+                <br/>
+                <!-- Provide a button to click to submit the form. -->
+                <input class="btn btn-primary" type="submit" name="submit" value="Save"/>
+            </form>
+        </div>
+    </div>
+{% endblock %}
